@@ -14,7 +14,7 @@ stop = 1    # upper bound of x
 ts = (stop - start)/N   # sampling interval
 sigma = 0.3             # standard deviation of the noise
 x = np.linspace(start, stop, num = N, endpoint = True)  # generate x value
-t = np.random.normal(A*np.sin(2*np.pi*f*x),sigma)       # generate y value
+y = np.random.normal(A*np.sin(2*np.pi*f*x),sigma)       # generate y value
 
 # Compose Matrix for optimization
 X = np.zeros((N,M+1))   # (N times M+1)
@@ -23,23 +23,23 @@ for i in range(N):
         X[i][j] = x[i]**j
 
 # Optimization
-w = np.linalg.inv(X.T @ X) @ X.T @ t
+w = np.linalg.inv(X.T @ X) @ X.T @ y
 
 # plot
 xp = np.linspace(start, stop, num = 1000, endpoint = True)
-t_ideal = A*np.sin(2*np.pi*f*xp)
+y_ideal = A*np.sin(2*np.pi*f*xp)
 Np = xp.shape[0]
-t_est = np.zeros(Np)
+y_est = np.zeros(Np)
 for i in range(Np):
     for j in range(M+1):
-        t_est[i] += (xp[i]**j)*w[j]
+        y_est[i] += (xp[i]**j)*w[j]
 
 plt.rcParams['font.family'] = 'Times New Roman'
-plt.scatter(x, t)
-plt.plot(xp,t_ideal,linestyle="dashed")
-plt.plot(xp,t_est)
+plt.scatter(x, y)
+plt.plot(xp,y_ideal,linestyle="dashed")
+plt.plot(xp,y_est)
 plt.ylim(-A-A*0.5, A+A*0.5)
-plt.legend(['Training set','Function used to genarate data','Estimate'])
+plt.legend(['Training set','True','Estimate'])
 plt.xlabel('x')
-plt.ylabel('t')
+plt.ylabel('y')
 plt.show()
