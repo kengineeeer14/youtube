@@ -11,7 +11,6 @@ f = 1       # frequency of sin wave.
 A = 1       # amplitude of the sine wave 
 start = 0   # lower bound of x
 stop = 1    # upper bound of x
-ts = (stop - start)/N   # sampling interval
 sigma = 0.3             # standard deviation of the noise
 x = np.linspace(start, stop, num = N, endpoint = True)  # generate x value
 y = np.random.normal(A*np.sin(2*np.pi*f*x),sigma)       # generate y value
