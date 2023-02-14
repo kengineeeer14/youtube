@@ -1,2 +1,2 @@
 # code-in-youtube
-This repo is for the codes introduced in my YouTube channel, [駆け出しエンジニア](https://www.youtube.com/@kengineeeer/).
+このレポジトリではYouTubeチャンネル[駆け出しエンジニア](https://www.youtube.com/@kengineeeer/)内でご紹介した内容に関連するプログラムをご共有しています．
