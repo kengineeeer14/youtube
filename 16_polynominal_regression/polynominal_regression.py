@@ -34,11 +34,12 @@ for i in range(Np):
         y_est[i] += (xp[i]**j)*w[j]
 
 plt.rcParams['font.family'] = 'Times New Roman'
+plt.rcParams["font.size"] = 20
 plt.scatter(x, y)
 plt.plot(xp,y_ideal,linestyle="dashed")
-plt.plot(xp,y_est)
+# plt.plot(xp,y_est)
 plt.ylim(-A-A*0.5, A+A*0.5)
-plt.legend(['Training set','True','Estimate'])
+# plt.legend(['Training set','True','Estimate'])
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
