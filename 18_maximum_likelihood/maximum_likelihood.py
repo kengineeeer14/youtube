@@ -6,7 +6,7 @@ mu = 0      # 母集団の平均値
 sigma2 = 4  # 母集団の分散
 
 
-N = 100      # サンプル数
+N = 2000      # サンプル数
 x_sample = np.zeros(N)
 for i in range(N):
     x_sample[i] = np.random.normal(mu,sigma2**(1/2))
