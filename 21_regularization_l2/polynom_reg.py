@@ -23,7 +23,7 @@ for i in range(N):
 
 Xc, ave_X = centering(X)
 w = opt_reg_wo0(y, Xc, lam)
-w[0] = w[0] - w[1:].T@ave_X[1:]
+w[0] = w[0] - w[1:].T@ave_X[1:] # adjust after centering
 w2 = opt(y, X, lam)
 
 # plot
