@@ -43,12 +43,10 @@ def centering(X):
 def opt_reg_wo0(y, X, lam):
     """
     optimization with regularization
-    0-oreder coefficient is removed from regularization term.
+    0-oreder coefficient is ignored in regularization term.
     X must be centered.
     """
-    n, m = np.shape(X)
-    Xd = X[:n,1:m]
-    wd = np.linalg.inv(Xd.T @ Xd + lam * np.eye(len(Xd.T))) @ Xd.T @ y
+    wd = np.linalg.inv(X.T @ X + lam * np.eye(len(X.T))) @ X.T @ y
     w0 = np.mean(y)
     w = np.hstack([w0, wd])
     return w

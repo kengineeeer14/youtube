@@ -46,4 +46,5 @@ plt.plot(M_arr, rms_test, marker='.',markersize=20, linestyle="dashed", color="r
 plt.legend(['Training set','Test set'])
 plt.xlabel('M')
 plt.ylabel('RMS')
+plt.grid()
 plt.show()

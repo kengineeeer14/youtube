@@ -12,7 +12,7 @@ start = 0   # lower bound of x
 stop = 1    # upper bound of x
 sigma = 0.3 # standard deviation of the noise
 
-log_lam_min = -40
+log_lam_min = -35
 log_lam_max = 0
 lam_arr = np.linspace(log_lam_min, log_lam_max, (log_lam_max-log_lam_min) + 1)
 
@@ -50,4 +50,5 @@ plt.plot(lam_arr, rms_test, marker='.',markersize=20, linestyle="dashed", color=
 plt.legend(['Training set','Test set'])
 plt.xlabel('ln$\lambda$')
 plt.ylabel('RMS')
+plt.grid()
 plt.show()
