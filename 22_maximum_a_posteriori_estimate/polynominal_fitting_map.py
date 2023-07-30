@@ -32,8 +32,6 @@ sigma_hat = np.sqrt(sigma2_hat)
 for i in range(M):
     print("Parameter estimate w" + str(i) + ": " + str(w[i]))
 
-print("Estimate of variance : " + str(sigma2_hat))
-
 # plot
 xp = np.linspace(start, stop, num = 5000, endpoint = True)
 y_ideal = A*np.sin(2*np.pi*f*xp)
@@ -49,7 +47,7 @@ plt.plot(xp,y_ideal,linestyle="dashed", color="black")
 plt.plot(xp,y_est, color="red")
 plt.ylim(0, 1)
 plt.ylim(-A-A*0.5, A+A*0.5)
-plt.legend(['Training set','True','MAP estimate'])
+plt.legend(['Training set','True','Estimate'])
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
