@@ -4,7 +4,6 @@ This code dipicts the orthogonality of the least squared method.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 ###### try to change value ##############
 X1 = np.array([5, 0, 0])    # X行列の1列目
