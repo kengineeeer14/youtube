@@ -30,5 +30,5 @@ ax.quiver(0, 0, x[0]*A[0,0], x[0]*A[1,0], color = "green",
           angles = 'xy', scale_units = 'xy', scale = 1)
 ax.quiver(x[0]*A[0,0], x[0]*A[1,0], x[1]*A[0,1], x[1]*A[1,1], color = "green",
           angles = 'xy', scale_units = 'xy', scale = 1)
-
+plt.savefig("/home/ken/Repos/youtube/temp/column2by2.png")  
 plt.show()
