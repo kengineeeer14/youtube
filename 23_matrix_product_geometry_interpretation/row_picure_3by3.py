@@ -77,5 +77,5 @@ ax.set_ylim([-5, 5])
 ax.set_zlim([-5, 5])
 
 # Show the plot
-plt.savefig("temp/row3by3.png")  
+plt.savefig("23_matrix_product_geometry_interpretation/figure/row3by3.png")  
 # plt.show()

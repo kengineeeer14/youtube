@@ -36,5 +36,5 @@ ax.set_ylabel('Y')
 ax.set_zlabel('Z')
 
 # Show the plot
-# plt.savefig("temp/column3by3.png")  
+plt.savefig("23_matrix_product_geometry_interpretation/figure/column3by3.png")  
 plt.show()

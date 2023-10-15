@@ -1,9 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# A = np.array([[1, 2],[-2, 1]])
-A = np.array([[2, 0],[0, 4]])
-b = np.array([4, -3])
+
+a1 = np.array([1, 3])
+a2 = np.array([2, 1])
+
+A = np.array([a1, a2])
+b = np.array([4, 3])
 Ainv = np.linalg.inv(A)
 x = Ainv@b
 xmin = x[0]-5
@@ -38,6 +41,6 @@ ax.set_xlim(xmin, xmax)
 ax.set_ylim(ymin, ymax)
 ax.axhline(0, color = "gray")
 ax.axvline(0, color = "gray")
-
+plt.savefig("23_matrix_product_geometry_interpretation/figure/row2by2.png")  
 plt.show()
 
