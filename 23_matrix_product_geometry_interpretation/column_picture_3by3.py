@@ -12,8 +12,7 @@ b = np.array([[4], [4], [4]])
 # print(A)
 Ainv = np.linalg.inv(A) # Inverse of A
 x = Ainv@b              # Solution to Ax = b
-print(b)
-print(A@x)
+
 # Create the figure and axes
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
@@ -37,5 +36,5 @@ ax.set_ylabel('Y')
 ax.set_zlabel('Z')
 
 # Show the plot
-plt.savefig("/home/ken/Repos/youtube/temp/column3by3.png")  
-# plt.show()
+# plt.savefig("temp/column3by3.png")  
+plt.show()
