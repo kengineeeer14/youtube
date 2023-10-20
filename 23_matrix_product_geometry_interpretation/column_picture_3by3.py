@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # Define the vectors
-a1 = np.array([[2], [1], [3]])
-a2 = np.array([[1], [1], [2]])
-a3 = np.array([[2], [1], [1]])
+a1 = np.array([[2], [1], [1]])
+a2 = np.array([[1], [2], [1]])
+a3 = np.array([[1], [1], [2]])
 
 A = np.column_stack((a1, a2, a3))
-b = np.array([[4], [4], [4]])
+b = np.array([[3], [0], [5]])
 # print(A)
 Ainv = np.linalg.inv(A) # Inverse of A
 x = Ainv@b              # Solution to Ax = b
