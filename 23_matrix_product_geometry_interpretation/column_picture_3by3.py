@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # Define the vectors
-a1 = np.array([[2], [1], [1]])
-a2 = np.array([[1], [2], [1]])
-a3 = np.array([[1], [1], [2]])
+a1 = np.array([[1], [2], [3]])
+a2 = np.array([[2], [3], [2]])
+a3 = np.array([[4], [-1], [4]])
 
 A = np.column_stack((a1, a2, a3))
-b = np.array([[3], [0], [5]])
+b = np.array([[7], [5], [3]])
 # print(A)
 Ainv = np.linalg.inv(A) # Inverse of A
 x = Ainv@b              # Solution to Ax = b
@@ -18,9 +18,9 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
 # Set the limits of the axes
-ax.set_xlim([-6, 6])
-ax.set_ylim([-6, 6])
-ax.set_zlim([-6, 6])
+ax.set_xlim([-10, 10])
+ax.set_ylim([-10, 10])
+ax.set_zlim([-10, 10])
 
 # Plot the vectors
 ax.quiver(0, 0, 0, a1[0], a1[1], a1[2], color='red')
@@ -36,5 +36,5 @@ ax.set_ylabel('Y')
 ax.set_zlabel('Z')
 
 # Show the plot
-plt.savefig("23_matrix_product_geometry_interpretation/figure/column3by3.png")  
+# plt.savefig("23_matrix_product_geometry_interpretation/figure/column3by3.png")  
 plt.show()

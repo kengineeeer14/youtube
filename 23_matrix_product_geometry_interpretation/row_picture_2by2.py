@@ -41,6 +41,6 @@ ax.set_xlim(xmin, xmax)
 ax.set_ylim(ymin, ymax)
 ax.axhline(0, color = "gray")
 ax.axvline(0, color = "gray")
-plt.savefig("23_matrix_product_geometry_interpretation/figure/row2by2.png")  
+# plt.savefig("23_matrix_product_geometry_interpretation/figure/row2by2.png")  
 plt.show()
 

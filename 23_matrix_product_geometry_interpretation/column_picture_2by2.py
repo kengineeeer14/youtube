@@ -9,7 +9,6 @@ b = np.array([4, 3])
 Ainv = np.linalg.inv(A)
 x = Ainv@b
 
-
 fig = plt.figure(figsize = (5, 4))
 ax = fig.add_subplot(111)
 ax.grid()
@@ -35,5 +34,5 @@ ax.quiver(0, 0, x[0]*A[0,0], x[0]*A[1,0], color = "green",
           angles = 'xy', scale_units = 'xy', scale = 1)
 ax.quiver(x[0]*A[0,0], x[0]*A[1,0], x[1]*A[0,1], x[1]*A[1,1], color = "green",
           angles = 'xy', scale_units = 'xy', scale = 1)
-plt.savefig("23_matrix_product_geometry_interpretation/figure/column2by2.png")  
+# plt.savefig("23_matrix_product_geometry_interpretation/figure/column2by2.png")  
 plt.show()
