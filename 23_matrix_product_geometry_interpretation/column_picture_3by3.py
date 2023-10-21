@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # Define the vectors
-a1 = np.array([[1], [2], [3]])
-a2 = np.array([[2], [3], [2]])
-a3 = np.array([[4], [-1], [4]])
+a1 = np.array([[1], [2], [4]])
+a2 = np.array([[2], [3], [-1]])
+a3 = np.array([[3], [2], [4]])
 
 A = np.column_stack((a1, a2, a3))
 b = np.array([[7], [5], [3]])
@@ -18,9 +18,9 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
 # Set the limits of the axes
-ax.set_xlim([-10, 10])
-ax.set_ylim([-10, 10])
-ax.set_zlim([-10, 10])
+ax.set_xlim([-2, 8])
+ax.set_ylim([-3, 7])
+ax.set_zlim([-5, 5])
 
 # Plot the vectors
 ax.quiver(0, 0, 0, a1[0], a1[1], a1[2], color='red')

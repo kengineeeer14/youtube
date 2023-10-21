@@ -9,7 +9,7 @@ a3 = np.array([4, -1, 4])
 # A = np.column_stack((a1, a2, a3))
 A = np.array([a1, a2, a3])
 b = np.array([7, 5, 3])
-
+print(A)
 # Define the x and y coordinates of the surface
 x = np.linspace(-6, 6, 100)
 y = np.linspace(-6, 6, 100)
@@ -25,9 +25,9 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
 # Plot the surface
-ax.plot_surface(X, Y, Z1, alpha=0.5)
-ax.plot_surface(X, Y, Z2, alpha=0.5)
-ax.plot_surface(X, Y, Z3, alpha=0.5)
+ax.plot_surface(X, Y, Z1, alpha=0.3, color = "blue")
+ax.plot_surface(X, Y, Z2, alpha=0.3, color = "red")
+ax.plot_surface(X, Y, Z3, alpha=0.3, color = "green")
 
 # Plot the line where surface intersects
 # a1 and a2
@@ -39,7 +39,7 @@ b12 = diffb12/diffa12[1] # y = a12*x + b12
 x12 = [-5, 5]
 y12 = [a12*x12[0]+b12, a12*x12[1]+b12]
 z12 = [b[0]/a1[2] - a1[0]/a1[2]*x12[0] - a1[1]/a1[2]*y12[0], b[0]/a1[2] - a1[0]/a1[2]*x12[1] - a1[1]/a1[2]*y12[1]]
-ax.plot(x12, y12, z12)
+ax.plot(x12, y12, z12, color = "black", linestyle = "dotted")
 
 # a2 and a3
 c23 = a2[2]/a3[2]
@@ -50,7 +50,7 @@ b23 = diffb23/diffa23[1] # y = a23*x + b23
 x23 = [-5, 5]
 y23 = [a23*x23[0]+b23, a23*x23[1]+b23]
 z23 = [b[1]/a2[2] - a2[0]/a2[2]*x23[0] - a2[1]/a2[2]*y23[0], b[1]/a2[2] - a2[0]/a2[2]*x23[1] - a2[1]/a2[2]*y23[1]]
-ax.plot(x23, y23, z23)
+ax.plot(x23, y23, z23, color = "black", linestyle = "dashed")
 
 # a1 and a3
 c31 = a3[2]/a1[2]
@@ -61,13 +61,12 @@ b31 = diffb31/diffa31[1] # y = a31*x + b31
 x31 = [-5, 5]
 y31 = [a31*x31[0]+b31, a31*x31[1]+b31]
 z31 = [b[2]/a3[2] - a3[0]/a3[2]*x31[0] - a3[1]/a3[2]*y31[0], b[2]/a3[2] - a3[0]/a3[2]*x31[1] - a3[1]/a3[2]*y31[1]]
-ax.plot(x31, y31, z31)
+ax.plot(x31, y31, z31, color = "black", linestyle = "dashdot")
 
 # Plot the point where the three surface intersect
 invA = np.linalg.inv(A)
 x = invA@b
 ax.scatter(x[0], x[1], x[2], color = "red")
-print(x)
 
 # Set the labels for the axes
 ax.set_xlabel('X')
