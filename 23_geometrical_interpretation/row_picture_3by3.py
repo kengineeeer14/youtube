@@ -9,7 +9,7 @@ a3 = np.array([4, -1, 4])
 # A = np.column_stack((a1, a2, a3))
 A = np.array([a1, a2, a3])
 b = np.array([7, 5, 3])
-print(A)
+
 # Define the x and y coordinates of the surface
 x = np.linspace(-6, 6, 100)
 y = np.linspace(-6, 6, 100)
