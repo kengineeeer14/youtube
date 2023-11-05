@@ -1,6 +1,8 @@
 import numpy as np
 
 def calc_solution(A, b):
+    A = A.copy()
+    b = b.copy()
     # Perform Gaussian elimination
     n = len(b)
     for i in range(n):
@@ -30,11 +32,11 @@ def calc_solution(A, b):
 
 if __name__ == '__main__':
     #Define the matrix A and vector b (3by3)
-    A = np.array([[1, 2, 3], [2, 3, 2], [4, -1, 4]], dtype=float)
-    b = np.array([7, 5, 3], dtype=float)
+    # A = np.array([[1, 2, 3], [2, 3, 2], [4, -1, 4]], dtype=float)
+    # b = np.array([7, 5, 3], dtype=float)
     #Define the matrix A and vector b (2by2)
-    # A = np.array([[1, 2], [-2, 1]], dtype=float)
-    # b = np.array([4, -3], dtype=float)
+    A = np.array([[1, 3], [2, 1]], dtype=float)
+    b = np.array([4, 3], dtype=float)
 
     x = calc_solution(A, b)
     # Print the solution

@@ -2,9 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import elimination
 
-A = np.array([[1, 2], [-2, 1]], dtype=float)
-b = np.array([4, -3], dtype=float)
+A = np.array([[1, 3], [2, 1]], dtype=float)
+b = np.array([4, 3], dtype=float)
 x = elimination.calc_solution(A, b)
+
 xmin = x[0]-5
 xmax = x[0]+5
 ymin = x[1]-5
@@ -37,6 +38,6 @@ ax.set_xlim(xmin, xmax)
 ax.set_ylim(ymin, ymax)
 ax.axhline(0, color = "gray")
 ax.axvline(0, color = "gray")
-# plt.savefig("23_matrix_product_geometry_interpretation/figure/row2by2.png")  
+# plt.savefig("24_elimination/figure/row2by2.png")  
 plt.show()
 
