@@ -32,8 +32,8 @@ def matrix_multiplication_4(A, B):
     
 
 # Define the matrices
-A = np.array([[1, 2, 3], [3, 2, 1]])
-B = np.array([[4, 2], [1, 0], [2, 3]])
+A = np.array([[-2, 2, 3], [2, -1, 1]])
+B = np.array([[2, 1], [1, 1], [3, 3]])
 
 C1 = matrix_multiplication_1(A, B)
 C2 = matrix_multiplication_2(A, B)
